@@ -1,5 +1,8 @@
 <?php
 
-class PostsController{
+class PostsController extends Controller{
     
+    public function __construct($methodName){
+    }
+
 }

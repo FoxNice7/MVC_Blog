@@ -18,8 +18,10 @@ class App
         
         $controllerName = (!empty($segments[0])) ? (string) $segments[0] : 'users';
 
+        $methodName = (!empty($segments[1])) ? (string) $segments[1] : 'register';
+
         try{
-            $this->controller = new Controller($controllerName);
+            $this->controller = new Controller($controllerName, $methodName);
         }catch(Exception $e){
             echo $e->getMessage();
         }

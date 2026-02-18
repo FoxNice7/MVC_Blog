@@ -1,5 +1,8 @@
 <?php
 
-class CommentsController{
-    
+class CommentsController extends Controller
+{
+    public function __construct()
+    {
+    }
 }
