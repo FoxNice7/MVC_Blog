@@ -1,8 +1,9 @@
 <?php
-
+require_once 'Controller.php';
 class App
 {
-    protected array $segments;
+
+    private $controller;
     public function __construct()
     {
         $scriptName = dirname($_SERVER['SCRIPT_NAME']);
@@ -15,10 +16,15 @@ class App
 
         $segments = explode('/', $uri);
         
-        $this->segments = $segments;
+        $controllerName = (!empty($segments[0])) ? (string) $segments[0] : 'users';
+
+        try{
+            $this->controller = new Controller($controllerName);
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+        
+        
     }
 
-    public function getUri(){
-        return $this->segments;
-    }
 }
