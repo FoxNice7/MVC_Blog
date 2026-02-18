@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>LOL REGISTER</p>
+    <p>LOL REGISTER lol</p>
 </body>
 </html>
