@@ -1,11 +1,15 @@
 <?php
 require_once 'Controller.php';
+require_once '../config/config.php';
 class App
 {
 
     private $controller;
     public function __construct()
     {
+
+        new Model();
+
         $scriptName = dirname($_SERVER['SCRIPT_NAME']);
 
         $uri = $_SERVER['REQUEST_URI'];
