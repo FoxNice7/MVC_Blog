@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-   <form action="UsersController.php" method="post">
+   <form action="users/register" method="post">
     <label for="username">User Name</label>
     <input type="text" name="username" id="username" required>
 

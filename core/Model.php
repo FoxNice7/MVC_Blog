@@ -6,7 +6,7 @@ class Model{
     private $config;
 
     public function __construct(){
-        $this->config = require __DIR__. '../config/config.php';
+        $this->config = require_once '../config/config.php';
     }
 
     protected function connect(){
