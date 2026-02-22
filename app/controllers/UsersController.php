@@ -14,10 +14,11 @@ class UsersController extends Controller
             $userName = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['pass'];
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $role = $_POST['role'];
 
             try{
-                $this->user = new User($userName, $email, $password, $role);
+                $this->user = new User($userName, $email, $hashedPassword, $role);
                 header('Location: ../posts/index');
                 exit();
             }catch(Exception $e){

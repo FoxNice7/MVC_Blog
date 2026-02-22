@@ -7,14 +7,14 @@ class User extends Model
     private $password;
     private $role;
 
-    public function __construct($userName, $email, $password, $role)
+    public function __construct($userName, $email, $hPassword, $role)
     {
         parent::__construct();
         $this->connect();
 
         $this->userName = $userName;
         $this->email = $email;
-        $this->password = $password;
+        $this->password = $hPassword;
         $this->role = $role;
 
         $this->createAccount();
