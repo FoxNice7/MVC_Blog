@@ -1,9 +1,12 @@
 <?php
-$dbParam = [
-    'host' => '',
-    'db_name' => '',
-    'user' => '',
-    'pass' => ''
-]
-
+function getConfig()
+{
+    return [
+        'host' => '',
+        'db_name' => '',
+        'user' => '',
+        'pass' => ''
+    ];
+    
+}
 ?>

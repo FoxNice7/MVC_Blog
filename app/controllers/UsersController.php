@@ -15,7 +15,16 @@ class UsersController extends Controller
             $email = $_POST['email'];
             $password = $_POST['pass'];
             $role = $_POST['role'];
-            $this->user = new User($userName, $email, $password, $role);
+
+            try{
+                $this->user = new User($userName, $email, $password, $role);
+                header('Location: ../posts/index');
+                exit();
+            }catch(Exception $e){
+                $error = $e->getMessage();
+                require_once __DIR__ . '/../views/errors.php';
+            }
+        
         } else {
             require_once __DIR__ . '/../views/users/register.php';
         }
